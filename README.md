@@ -1,5 +1,5 @@
-# plexport
-Simple python script, cooked up with the help of ChatGPT, which connects to Plex, scans for predefined playlists, downloads associated FLAC files, populates the playlists in a Walkman compatible format and converts album art so it shows up on my NW-A45 walkman.
+# plexport.py
+Plexport.py is a simple python script which I cooked up with the help of ChatGPT, which connects to Plex, scans for predefined playlists, downloads associated FLAC files, populates the playlists in a Walkman compatible format and converts album art so it shows up on my NW-A45 walkman.
 
 This is very much a work in progress and I can barely read Python, so please bear with me. Please report any issues you encounter. Forks and pull requests encouraged!
 
