@@ -1,5 +1,5 @@
 # plexport
-Simple python script, cooked up with the help of ChatGPT, which connects to Plex, scans for predefined playlists, downloads associated FLAC files and normalizes album art so it shows up on my NW-A45 walkman.
+Simple python script, cooked up with the help of ChatGPT, which connects to Plex, scans for predefined playlists, downloads associated FLAC files, populates the playlists in a Walkman compatible format and converts album art so it shows up on my NW-A45 walkman.
 
 This is very much a work in progress and I can barely read Python, so please bear with me. Please report any issues you encounter. Forks and pull requests encouraged!
 
@@ -10,3 +10,5 @@ This is very much a work in progress and I can barely read Python, so please bea
 3. Download the plexport.py script to your home folder and change the `plex_url` and `plex_token` variables at the top.
 4. Make it executable: `chmod +x plexport.py`
 5. Run the script with `./plexport.py`
+
+Use `CTRL + C` to abort the script after finishing the current operation.
