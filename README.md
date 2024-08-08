@@ -13,4 +13,4 @@ Please note that I created this script with the help of ChatGPT. It's very much 
 6. Make the script executable: `chmod +x plexport.py`.
 7. Run the script with `./plexport.py`.
 
-Use `CTRL + C` to abort the script after finishing the current operation.
+The script will run until it's done. If you need to abort the operation, use `CTRL + C`. It will gradefully exit after it is done processing the current FLAC.
