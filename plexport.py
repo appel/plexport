@@ -12,7 +12,6 @@ from mutagen.mp3 import MP3
 from plexapi.server import PlexServer
 from PIL import Image
 
-
 # Plex server details and authentication
 plex_url = 'http://127.0.0.1:32400' # Change this to your Plex server URL
 plex_token = 'sEcReTpLeXtOkEn' # Change this to your Plex token
@@ -23,11 +22,11 @@ except requests.exceptions.ConnectionError:
     print(f"Connection failed, hostname '{plex_url}' not found.")
     sys.exit(1)
 
-EXPORT_DIR = './export'
-PLAYLIST_NAMES = ['All liked', '80s', 'Calm', 'Jazz', 'Hip-Hop & Downbeat', 'Favorite Albums']  # List of existing playlist names to process
-BASE_PATH = '/share/Music/'  # Base path to your music files on the Plex server
+EXPORT_DIR = './export'  # Folder where FLAC files and playlists will be stored
+PLAYLIST_NAMES = ['All liked', '80s', 'Jazz', 'Hip-Hop & Downbeat', 'Favorite Albums']  # List of playlists that will be downloaded
+BASE_PATH = '/share/Music/'  # Base path to your music library on the Plex server
 
-# Setup graceful exit
+# Setup graceful exit with Ctrl+C
 def signal_handler(sig, frame):
     print('Ctrl+C pressed, exiting after current operation...')
     sys.exit(0)
@@ -109,7 +108,6 @@ def main():
             for item in playlist.items():
                 if item.TYPE == 'track':
                     original_path = item.media[0].parts[0].file
-                    # print(f"Original file path: {original_path}")
 
                     relative_path = os.path.relpath(original_path, start=BASE_PATH)
                     export_path = os.path.join(EXPORT_DIR, relative_path)
