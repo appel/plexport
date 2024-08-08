@@ -7,7 +7,7 @@ This is very much a work in progress and I can barely read Python, so please bea
 
 1. Make sure Python 3 is installed (I use WSL2 on Windows 11).
 2. Install the excellent [PlexAPI]([url](https://github.com/pkkid/python-plexapi)) library with `pip install plexapi` (YMMV).
-3. Download the plexport.py script to your home folder and change the `plex_url` and `plex_token` variables at the top.
+3. Download the plexport.py script to your home folder and change the `plex_url` and `plex_token` variables at the top. [This article](https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/) explains how you can obtain an API token for your Plex server.
 4. Also change the `EXPORT_DIR`, `PLAYLIST_NAMES` and `BASE_PATH` variables to match your environment.
 6. Make the script executable: `chmod +x plexport.py`.
 7. Run the script with `./plexport.py`.
